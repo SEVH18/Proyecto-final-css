@@ -1,0 +1,308 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Lato", sans-serif;;
+}
+
+/* STARTER MENU */
+
+.top-menu{
+    background-color: #b97029;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    text-shadow: 1px 1px 3px black;
+}
+
+.logo{
+    /* border: 1px solid red; */
+    width: 250px;
+
+}
+
+.logo img{
+    width: 70px;
+    margin-left: 7px;
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
+}
+
+.list-menu{
+    display: flex;
+    gap: 16px;
+    margin-right: 10px;
+}
+
+.list-menu a{
+    color: white;
+}
+/* SECTION HERO */
+
+.hero{
+    background-image: url(../img/header-decoplantas.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    text-align: center;
+    font-size: 32px;
+    text-shadow: 3px 1px 2px black;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    padding: 1em;
+}
+
+.hero button{
+    width: 25%;
+    background-color: #3a774b;
+    color: white;
+    border-radius: 15px;
+    padding: 15px;
+    font-size: medium;
+    font-weight:bold;
+}
+
+button a{
+    color: white;
+}
+
+.aside-menu{
+    display: none;
+}
+
+/* ITEM LIST */
+
+
+.item-list{
+    background-color: #f1f3f3;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.filtros{
+    text-align: center ;
+   /*  border: 1px solid red; */
+   margin-top: 20px;
+}
+
+.product-list{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.card-product{
+    width: 70%;
+    border: 2px solid rgba(138, 138, 138, 0.507);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;  
+}
+.card-image{
+    max-width: 90%;
+    border-radius: 10px;
+    padding: 6px 6px 0px 6px  ;
+    overflow: hidden;
+    /* border: 1px solid red; */
+}
+
+.card-image img{
+    object-fit: contain;
+    border-radius: 15px;
+    max-width: 100%;
+    height: auto;
+    filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.8));
+     transform: scale();
+     transition: transform 1s ease-out;  
+}
+
+.card-image img:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+
+}
+
+.icons{
+    margin-bottom: 15px;
+    display: flex;
+    align-items:center;
+    justify-content:space-evenly;
+    
+}
+
+.description-card{
+ width: 100%;
+ display: flex;
+ flex-direction: column;
+ gap: 5px;
+
+}
+
+.product-name{
+    border-bottom: 2px solid rgba(138, 138, 138, 0.507);
+    max-width: 100%;
+    padding-bottom: 5px;
+    margin-top: 15px;
+    text-align: center;
+    color: #3a774b;
+}
+
+.prices{
+    margin-bottom: 5px;
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-weight: bold;
+
+}
+
+.old-prices{
+    color: #3a774b;
+    text-decoration: line-through;
+}
+
+.discount{
+    color: #a7611b;
+}
+
+.footer{
+    background-color: #b97029;
+    margin-top: 15px;
+   display: grid;
+   grid-template-rows: 3fr 1fr;
+   color: white;
+   text-shadow: 1px 1px 3px black;
+}
+
+.media-footer{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+  text-align: center;
+  margin-bottom: 6px;
+
+}
+
+.about-us{
+    text-align: center;
+    margin-right: 5px;
+}
+
+.hyper-text{
+    text-align: justify;
+}
+
+.hyper-text a{
+    color: #3a774b;
+}
+
+.copyright{
+    text-align: center;
+    padding-bottom: 6px;
+  
+}
+
+          /*  FORMATO COMPUTADOR */
+
+@media (min-width: 768px){
+ .top-menu{
+    display: none;
+ }
+
+ .aside-menu{
+    grid-area: aside-menu;
+    display: flex;
+    background-color: #b97029;
+    flex-direction: column;
+    color: white;
+    width: 100%;
+    gap: 60px;
+
+
+ }
+
+ .aside-menu img{
+   max-width:100%;
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
+ }
+
+ .aside-menu img:hover{
+    cursor: pointer;
+ }
+
+.aside-menu-list{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    text-shadow: 1px 1px 3px black;
+
+}
+
+.aside-menu-list a{
+    color: white;
+}
+
+.aside-menu-list a:hover{
+    color: #3a774b;
+    
+}
+
+ .principal-content{
+    grid-area: principal-content;
+ }
+
+ .grid-container{
+    display: grid;
+    grid-template-areas: 
+    'principal-content aside-menu'
+    ;
+    grid-template-columns: 1fr 12em;
+ }
+
+.product-list{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 3em;
+    margin-bottom: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-product{
+    width: 15em;
+    height: 18em;  
+}
+
+.footer{
+    margin-top: 0;
+    padding-top: 5px;
+    background-color: #b36920;
+    font-size: large;
+}
+
+.filtros{
+    width: 100%;
+    font-size: large;
+    margin-top: 0;
+}
+
+
+
+}
+  
